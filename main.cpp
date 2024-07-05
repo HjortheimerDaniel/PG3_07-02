@@ -27,14 +27,17 @@ int main() {
 	//put the texts inside seperate threads
 
 	std::thread thread1(Thread1, text1);
+	thread1.join();
 	std::thread thread2(Thread2, text2);
+	thread2.join();
 	std::thread thread3(Thread3, text3);
+	thread3.join();
 
 	//wait for the all the threads to be finished then run
 	
-	thread1.join(); 
-	thread2.join();
-	thread3.join();
+
+	
+
 	
 
 	return 0; }
